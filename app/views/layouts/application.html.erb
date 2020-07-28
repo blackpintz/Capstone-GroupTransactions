@@ -10,6 +10,10 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render 'layouts/navigation' %>
+    <div class="container-fluid mt-3">
+     <%= render 'layouts/flash' %>
+      <%= yield %>
+    </div>
   </body>
 </html>
