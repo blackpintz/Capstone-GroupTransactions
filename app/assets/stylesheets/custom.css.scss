@@ -10,7 +10,22 @@
   height: 100px;
 }
 
-.transaction h5 {
+.group {
+  height: 70px;
+}
+
+.blockquote-footer {
+  font-size: 11px;
+}
+
+
+.transaction h5, .group-content {
   line-height: 2.7;
   width: 230px;
 }
+
+.group-content p {
+  height: 30px;
+  line-height: 2;
+}
+

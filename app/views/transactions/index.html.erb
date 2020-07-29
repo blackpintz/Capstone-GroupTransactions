@@ -5,8 +5,8 @@
     </div>
 </div>
 <%= render @transactions %>
-<div class="card text-white bg-success mb-3">
+<div class="card text-white bg-success mb-3 rounded-0">
   <div class="card-body">
-      <button type="button" class="btn btn-outline-light btn-lg btn-block">Add new</button>
+       <%= link_to "Add New Decor", new_user_transaction_path, class: "btn btn-outline-light btn-lg btn-block" %>
   </div>
 </div>

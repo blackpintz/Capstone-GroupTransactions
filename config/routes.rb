@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     get 'unlisted-decor', to: 'transactions#unlisted'
     resources :transactions, only: [:create, :new, :show]
   end
+  resources :groups
   root 'users#new'
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create'
