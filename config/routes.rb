@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  resources :users, except: [:new]
+  resources :users, except: [:new] do
+    get 'all-decor', to: 'transactions#index'
+    get 'unlisted-decor', to: 'transactions#unlisted'
+    resources :transactions, only: [:create, :new, :show]
+  end
   root 'users#new'
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create'
