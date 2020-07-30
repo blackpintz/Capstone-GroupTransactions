@@ -3,15 +3,15 @@
          <h4><%= @user.username %></h4>
          <div class="d-flex show-list align-items-center">
              <img width="50" height="50" class="rounded-circle" src="https://images.unsplash.com/photo-1579634151863-8ddedd098251?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format" />
-             <h5 class="ml-2 border-bottom font-weight-light"><%= link_to "My transactions.", user_path(@user), class: "text-light" %></h5>
+             <h5 class="ml-2 border-bottom font-weight-light"><%= link_to "My Decors.", user_decors_path(@user), class: "text-light" %></h5>
          </div>
          <div class="d-flex show-list align-items-center">
              <img width="50" height="50" class="rounded-circle" src="https://images.unsplash.com/photo-1579634151863-8ddedd098251?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format" />
-             <h5 class="ml-2 border-bottom font-weight-light"> <%= link_to "My external transactions.", user_path(@user), class: "text-light" %></h5>
+             <h5 class="ml-2 border-bottom font-weight-light"> <%= link_to "My uncategorized decors.", user_unlisted_decor_path(@user), class: "text-light" %></h5>
          </div>
          <div class="d-flex show-list align-items-center">
              <img width="50" height="50" class="rounded-circle" src="https://images.unsplash.com/photo-1579634151863-8ddedd098251?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format" />
-             <h5 class="ml-2 border-bottom font-weight-light"><%= link_to "My Groups.", user_path(@user), class: "text-light" %></h5>
+             <h5 class="ml-2 border-bottom font-weight-light"><%= link_to "Categories.", categories_path, class: "text-light" %></h5>
          </div>
           <%= link_to 'Log out', logout_path, method: :delete, class: 'btn btn-danger' %>
  </div>
