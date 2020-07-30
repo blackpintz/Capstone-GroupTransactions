@@ -1,5 +1,10 @@
 @import 'bootstrap/dist/css/bootstrap';
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 .show-page {
   width: 100%;
   height: 100vh;

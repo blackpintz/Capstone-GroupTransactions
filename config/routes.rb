@@ -2,7 +2,7 @@
 Rails.application.routes.draw do
     resources :users, except: [:new] do
         get 'unlisted-decor', to: 'decors#unlisted'
-        resources :decor, only: [:create, :new, :show, :index]
+        resources :decors, only: [:create, :new, :show, :index]
     end
     root 'users#new'
     get 'login', to: 'sessions#new'
