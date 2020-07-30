@@ -1,0 +1,7 @@
+ <div class="d-flex group align-items-center">
+ <%= fa_icon category.icon, class: "fa-2x" %>
+ <blockquote class="blockquote group-content border-bottom ml-2 pt-4 pr-3">
+  <p class="mb-0"><%= link_to category.name, user_path(current_user), class: "text-light" %></p>
+  <footer class="blockquote-footer text-dark"><%= category.created_at.strftime("%d %B %Y")%></footer>
+</blockquote>
+</div>

@@ -12,12 +12,12 @@ class CategoriesController < ApplicationController
   end
 
   def index
-    @categories = Categories.all.alphabetical_order
+    @categories = Category.all.alphabetical_order
   end
 
   private
 
-  def group_params
-    params.require(:group).permit(:name, :icon)
+  def category_params
+    params.require(:category).permit(:name, :icon)
   end
 end
