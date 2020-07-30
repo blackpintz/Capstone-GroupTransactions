@@ -10,22 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_30_132951) do
+ActiveRecord::Schema.define(version: 2020_07_30_150125) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
     t.string "icon"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "decor_categories", force: :cascade do |t|
-    t.integer "decor_id", null: false
-    t.integer "category_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["category_id"], name: "index_decor_categories_on_category_id"
-    t.index ["decor_id"], name: "index_decor_categories_on_decor_id"
   end
 
   create_table "decors", force: :cascade do |t|
@@ -43,7 +34,5 @@ ActiveRecord::Schema.define(version: 2020_07_30_132951) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "decor_categories", "categories"
-  add_foreign_key "decor_categories", "decors"
   add_foreign_key "decors", "users"
 end

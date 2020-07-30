@@ -7,6 +7,6 @@
 <%= render @decors %>
 <div class="card text-white bg-success mb-3 rounded-0">
   <div class="card-body">
-      <button type="button" class="btn btn-outline-light btn-lg btn-block">Add new</button>
+      <%= link_to "Add New Decor", new_user_decor_path, class: "btn btn-outline-light btn-lg btn-block" %>
   </div>
 </div>
