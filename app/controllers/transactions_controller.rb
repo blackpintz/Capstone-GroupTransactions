@@ -4,10 +4,9 @@ class TransactionsController < ApplicationController
     @transactions = @user.transactions
     @total = @transactions.pluck(:amount).sum
   end
-  
-  def new
-  end
-  
+
+  def new; end
+
   def create
     new_transaction = @user.transactions.build(transaction_params)
     if new_transaction.save
@@ -18,11 +17,10 @@ class TransactionsController < ApplicationController
     end
   end
 
-  def unlisted
-  end
+  def unlisted; end
 
   private
-  
+
   def transaction_params
     params.require(:transaction).permit(:name, :amount)
   end

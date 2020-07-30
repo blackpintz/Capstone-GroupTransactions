@@ -1,14 +1,14 @@
  <!--<div class="d-flex group align-items-center">-->
  <!--    <%= fa_icon group.icon, class: "fa-2x" %>-->
  <!--    <div class="group-content border-bottom ml-2">-->
- <!--     <h5 class="font-weight-light"><%= link_to group.name, user_path(group.user), class: "text-light" %></h5>-->
+ <!--     <h5 class="font-weight-light"><%= link_to group.name, user_path(current_user), class: "text-light" %></h5>-->
  <!--     <p class="mb-0 text-light"><%= group.created_at.strftime("%d %B %Y")%></p>-->
  <!--    </div>-->
  <!--</div>-->
  <div class="d-flex group align-items-center">
  <%= fa_icon group.icon, class: "fa-2x" %>
  <blockquote class="blockquote group-content border-bottom ml-2 pt-4 pr-3">
-  <p class="mb-0"><%= link_to group.name, user_path(group.user), class: "text-light" %></p>
+  <p class="mb-0"><%= link_to group.name, user_path(current_user), class: "text-light" %></p>
   <footer class="blockquote-footer text-dark"><%= group.created_at.strftime("%d %B %Y")%></footer>
 </blockquote>
 </div>
