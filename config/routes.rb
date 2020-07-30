@@ -1,4 +1,5 @@
 # frozen_string_literal: true
 Rails.application.routes.draw do
-   root 'users#new'
+    resources :users, except: [:new]
+    root 'users#new'
 end
