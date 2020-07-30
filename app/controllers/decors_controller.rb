@@ -4,12 +4,12 @@ class DecorsController < ApplicationController
     @decors = @user.decors.ordered_by_most_recent
     @total = @decors.pluck(:price).sum
   end
-  
+
   def new
     @categories_array = Category.all.map { |category| [category.name, category.id] }
   end
-  
-   def create
+
+  def create
     new_decor = @user.decors.build(decor_params)
     if new_decor.save
       flash[:notice] = 'You successfully created a new decor.'
@@ -17,12 +17,12 @@ class DecorsController < ApplicationController
     else
       render 'new'
     end
-   end
+  end
 
   def unlisted; end
 
   private
-  
+
   def decor_params
     params.require(:decor).permit(:name, :price, :category_id)
   end
