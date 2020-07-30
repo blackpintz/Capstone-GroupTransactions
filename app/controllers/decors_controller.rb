@@ -5,8 +5,7 @@ class DecorsController < ApplicationController
     @total = @decors.pluck(:price).sum
   end
 
-  def unlisted
-  end
+  def unlisted; end
 
   private
 
