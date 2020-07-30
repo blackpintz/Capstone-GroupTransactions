@@ -19,7 +19,10 @@ class DecorsController < ApplicationController
     end
   end
 
-  def unlisted; end
+  def unlisted
+    @decors = @user.decors.with_no_category.ordered_by_most_recent
+    @total = @decors.pluck(:price).sum
+  end
 
   private
 
