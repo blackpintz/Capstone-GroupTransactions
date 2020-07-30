@@ -13,7 +13,7 @@
                            <%= f.text_field :price, autofocus: true, autocomplete: 'group name', placeholder: "Decor price" , class: 'form-control' %>
                      </div>
                      <div class="form-group">
-                         <%= select_tag(:name, options_from_collection_for_select(Category.all, :id, :name), include_blank: "Select Category" ,class: "custom-select mb-1") %>
+                         <%= f.select :category_id, options_from_collection_for_select(Category.all, :id, :name), {include_blank: "Select Category"}, {class: "custom-select mb-1"} %>
                      </div>
                      <div class="form-group">
                           <%= f.submit "New Category", class: 'btn btn-secondary btn-block' %>

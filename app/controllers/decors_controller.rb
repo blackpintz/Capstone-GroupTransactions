@@ -12,7 +12,6 @@ class DecorsController < ApplicationController
    def create
     new_decor = @user.decors.build(decor_params)
     if new_decor.save
-      DecorCategory.create(decor_id: new_decor.id, category_id: params[:name])
       flash[:notice] = 'You successfully created a new decor.'
       redirect_to user_decors_path
     else
@@ -25,7 +24,7 @@ class DecorsController < ApplicationController
   private
   
   def decor_params
-    params.require(:decor).permit(:name, :price)
+    params.require(:decor).permit(:name, :price, :category_id)
   end
 
   def set_user
