@@ -1,0 +1,2 @@
+class DecorsController < ApplicationController
+end
