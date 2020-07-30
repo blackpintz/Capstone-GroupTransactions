@@ -15,6 +15,11 @@ class CategoriesController < ApplicationController
     @categories = Category.all.alphabetical_order
   end
 
+  def show
+    @category = Category.find(params[:id])
+    @decors = @category.decors
+  end
+
   private
 
   def category_params

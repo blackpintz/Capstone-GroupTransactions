@@ -5,9 +5,7 @@ class DecorsController < ApplicationController
     @total = @decors.pluck(:price).sum
   end
 
-  def new
-    @categories_array = Category.all.map { |category| [category.name, category.id] }
-  end
+  def new; end
 
   def create
     new_decor = @user.decors.build(decor_params)
