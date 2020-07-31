@@ -1,11 +1,11 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show]
+  before_action :require_login, only: %i[show]
   before_action :require_user, only: [:show]
   before_action :not_logged_in?, only: [:new]
   def new; end
 
   def create
-    redirect_to user_path(current_user) if logged_in?
     @user = User.new(user_params)
     @user.save
     session[:user_id] = @user.id
@@ -18,7 +18,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:username)
+    params.require(:user).permit(:username, :avatar)
   end
 
   def set_user

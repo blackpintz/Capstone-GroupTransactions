@@ -1,3 +1,8 @@
+<div class="d-flex justify-content-between signup-nav text-light align-items-end">
+    <%= fa_icon "arrow-left", class: "fa-3x font-weight-light" %>
+    <h4 class="font-weight-light">REGISTER</h4>
+    <p class="mr-2 mb-1">Next</p>
+</div>
 <h2 class="text-center">Sign up</h2>
 <div class="row justify-content-center">
     <div class="col-4">
@@ -7,6 +12,10 @@
                      <div class="form-group">
                            <%= f.label :username %>
                            <%= f.text_field :username, autofocus: true, autocomplete: 'user name', placeholder: "User name" , class: 'form-control' %>
+                     </div>
+                      <div class="form-group">
+                           <%= f.label :Photo %>
+                           <%= f.file_field :avatar, class: 'form-control' %>
                      </div>
                      <div class="form-group">
                           <%= f.submit "Sign up", class: 'btn btn-secondary btn-block' %>

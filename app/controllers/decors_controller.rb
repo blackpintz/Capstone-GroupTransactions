@@ -1,5 +1,6 @@
 class DecorsController < ApplicationController
   before_action :set_user, only: %i[show index create unlisted]
+  before_action :require_login, only: %i[index]
   before_action :require_user, only: %i[edit update destroy unlisted index]
   def index
     @decors = @user.decors.ordered_by_most_recent
