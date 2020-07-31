@@ -4,4 +4,7 @@
   <p class="mb-0"><%= link_to category.name, category_path(category), class: "text-light" %></p>
   <footer class="blockquote-footer text-dark"><%= category.created_at.strftime("%d %B %Y")%></footer>
 </blockquote>
+<span><%= link_to 'Delete', category_path(category), method: :delete, data: {confirm: "Are you sure you want to delete?"}, 
+class: "btn btn-danger btn-sm"%></span>
+<span><%= link_to 'Edit', edit_category_path(category), class: "btn btn-danger btn-sm ml-1"%></span>
 </div>
