@@ -1,5 +1,6 @@
 class DecorsController < ApplicationController
   before_action :set_user, only: %i[show index create unlisted]
+  before_action :require_user, only: %i[edit update destroy unlisted index]
   def index
     @decors = @user.decors.ordered_by_most_recent
     @total = @decors.pluck(:price).sum
@@ -30,5 +31,9 @@ class DecorsController < ApplicationController
 
   def set_user
     @user = User.find(params[:user_id])
+  end
+
+  def require_user
+    redirect_to user_path(current_user) if current_user != @user
   end
 end

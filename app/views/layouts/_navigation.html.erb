@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <%= link_to "Home", user_path(current_user), class: "navbar-brand"%>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle h5 pt-2 mb-0" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         Decors
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <%= link_to "My Decors.", user_decors_path(current_user), class: "dropdown-item" %>
+          <%= link_to "My uncategorized decors.", user_unlisted_decor_path(current_user), class: "dropdown-item" %>
+          <div class="dropdown-divider"></div>
+          <%= link_to "Add New Decor", new_user_decor_path(current_user), class: "dropdown-item" %>
+        </div>
+      </li>
+      <li class="nav-item pt-2">
+        <%= link_to "Categories", categories_path, class: "navbar-link text-light"%>
+      </li>
+    </ul>
+     <%= link_to "Log out", logout_path, method: :delete, class: 'nav-link text-light' %>
+  </div>
+</nav>

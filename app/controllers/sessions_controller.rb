@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+  before_action :not_logged_in?, only: [:new]
   def new; end
 
   def create
