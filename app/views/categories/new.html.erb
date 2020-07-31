@@ -9,7 +9,7 @@
                            <%= f.text_field :name, autofocus: true, autocomplete: 'category name', placeholder: "Category name" , class: 'form-control' %>
                      </div>
                      <div class="form-group">
-                         <%= f.select :icon, options_for_select(["None", "cutlery", "building", "home", "bath"]), {}, class: "custom-select mb-1" %>
+                         <%= f.select :icon, options_for_select(@category_array), {include_blank: "Select Icon"}, {class: "custom-select mb-1"} %>
                      </div>
                      <div class="form-group">
                           <%= f.submit "New Category", class: 'btn btn-secondary btn-block' %>

@@ -1,5 +1,7 @@
 class CategoriesController < ApplicationController
-  def new; end
+  def new
+    @category_array = icons
+  end
 
   def create
     new_category = Category.new(category_params)
