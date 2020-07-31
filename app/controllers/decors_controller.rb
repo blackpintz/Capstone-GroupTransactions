@@ -7,7 +7,9 @@ class DecorsController < ApplicationController
     @total = @decors.pluck(:price).sum
   end
 
-  def new; end
+  def new
+    @decor = Decor.new
+  end
 
   def create
     new_decor = @user.decors.build(decor_params)
@@ -15,7 +17,7 @@ class DecorsController < ApplicationController
       flash[:notice] = 'You successfully created a new decor.'
       redirect_to user_decors_path
     else
-      render 'new'
+      render :new
     end
   end
 

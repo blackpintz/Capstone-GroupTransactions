@@ -1,7 +1,9 @@
 class CategoriesController < ApplicationController
   before_action :set_category, only: %i[show destroy edit update]
+  before_action :icons_array, only: %i[new create edit update]
+
   def new
-    @category_array = icons
+    @category = current_user.categories.build
   end
 
   def create
@@ -14,9 +16,7 @@ class CategoriesController < ApplicationController
     end
   end
 
-  def edit
-    @category_array = icons
-  end
+  def edit; end
 
   def update
     if @category.update(category_params)
@@ -45,6 +45,10 @@ class CategoriesController < ApplicationController
 
   def set_category
     @category = Category.find(params[:id])
+  end
+
+  def icons_array
+    @category_array = icons
   end
 
   def category_params
