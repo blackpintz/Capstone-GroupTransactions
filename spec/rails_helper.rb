@@ -61,7 +61,7 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
-  
+
   if Bullet.enable?
     config.before(:each) do
       Bullet.start_request
