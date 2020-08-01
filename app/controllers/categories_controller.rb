@@ -28,7 +28,7 @@ class CategoriesController < ApplicationController
   end
 
   def index
-    @categories = Category.all.alphabetical_order
+    @categories = Category.all.alphabetical_order.includes(:user)
   end
 
   def show

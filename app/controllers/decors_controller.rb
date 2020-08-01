@@ -3,7 +3,7 @@ class DecorsController < ApplicationController
   before_action :require_login, only: %i[index]
   before_action :require_user, only: %i[edit update destroy unlisted index]
   def index
-    @decors = @user.decors.ordered_by_most_recent
+    @decors = @user.decors.ordered_by_most_recent.includes(:category)
     @total = @decors.pluck(:price).sum
   end
 
