@@ -1,0 +1,12 @@
+<% if @category.errors.any?%>
+<ul class="alert alert-warning alert-dismissible fade show rounded-0 mt-1 mx-auto w-50" role="alert">
+    <%@category.errors.full_messages.each do |err|%>
+        <li>
+            <%=err%>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </li>
+    <%end%>
+</ul>
+<%end%>

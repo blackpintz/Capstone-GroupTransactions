@@ -3,19 +3,7 @@
     <h4 class="font-weight-light">REGISTER</h4>
     <p class="mr-2 mb-1">Next</p>
 </div>
-<%= render 'layouts/flash' %>
-
-<% if @user.errors.any?%>
-<ul class="alert alert-warning alert-dismissible fade show rounded-0 mt-1 ml-2 w-75" role="alert">
-    <%@user.errors.full_messages.each do |err|%>
-        <li><%=err%>
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
-        </li>
-    <%end%>
-</ul>
-<%end%>
+<%= render 'users/error_msgs' %>
 <h2 class="text-center">Sign up</h2>
 <div class="row justify-content-center">
     <div class="col-4">
