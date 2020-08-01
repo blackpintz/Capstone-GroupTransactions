@@ -1,4 +1,6 @@
 module ApplicationHelper
+  private
+
   def image_avatar(user)
     if user.avatar.attached?
       image_tag user.avatar, style: 'width: 100px; height: 100px', class: 'rounded-circle'
