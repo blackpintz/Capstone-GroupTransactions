@@ -12,7 +12,6 @@
   <body>
      <%= render 'layouts/navigation' if logged_in? %>
     <div class="container-fluid p-0">
-      <%= render 'layouts/flash' %>
       <%= yield %>
     </div>
   </body>

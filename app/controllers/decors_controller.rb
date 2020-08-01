@@ -12,12 +12,12 @@ class DecorsController < ApplicationController
   end
 
   def create
-    new_decor = @user.decors.build(decor_params)
-    if new_decor.save
+    @decor = @user.decors.build(decor_params)
+    if @decor.save
       flash[:notice] = 'You successfully created a new decor.'
       redirect_to user_decors_path
     else
-      render :new
+      render 'new'
     end
   end
 

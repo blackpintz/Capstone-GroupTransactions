@@ -7,10 +7,13 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    @user.save
+    if @user.save
     session[:user_id] = @user.id
     flash[:notice] = "Welcome #{@user.username}"
     redirect_to user_path(@user)
+    else
+      render 'new'
+    end
   end
 
   def show; end

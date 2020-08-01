@@ -3,12 +3,12 @@ class CategoriesController < ApplicationController
   before_action :icons_array, only: %i[new create edit update]
 
   def new
-    @category = current_user.categories.build
+    @category = Category.new
   end
 
   def create
-    new_category = current_user.categories.build(category_params)
-    if new_category.save
+    @category = current_user.categories.build(category_params)
+    if @category.save
       flash[:notice] = 'You successfully created a new category.'
       redirect_to categories_path
     else
