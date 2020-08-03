@@ -10,8 +10,9 @@
 - A user can also edit or delete the decors added. 
 - A user can only edit a category that he/she has created.
 
-[Live demo link](https://secret-garden-94979.herokuapp.com/)
-[video presentation](https://www.loom.com/share/9cf85feeb8214e1789bdd9df292f5962)
+-[Live demo link](https://secret-garden-94979.herokuapp.com/)
+
+-[video presentation](https://www.loom.com/share/9cf85feeb8214e1789bdd9df292f5962)
 
 ## Built With
 
