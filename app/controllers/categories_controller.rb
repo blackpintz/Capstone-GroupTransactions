@@ -20,8 +20,7 @@ class CategoriesController < ApplicationController
 
   def update
     if @category.update(category_params)
-      flash[:notice] = 'Category was successfully edited.'
-      redirect_to categories_path
+      redirect_to categories_path, notice: 'Category was successfully edited.'
     else
       render 'edit'
     end
