@@ -1,4 +1,5 @@
 class CategoriesController < ApplicationController
+  before_action :require_login
   before_action :set_category, only: %i[show destroy edit update]
   before_action :icons_array, only: %i[new create edit update]
 
