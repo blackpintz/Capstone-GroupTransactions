@@ -24,6 +24,9 @@ feature 'category features', type: :feature do
       @user = User.create(username: 'Allan')
       @user.categories.create(name: 'Bathroom', icon: 'bath')
       @user.categories.create(name: 'Outdoor', icon: 'tree')
+      visit '/login'
+      fill_in 'session[username]', with: 'Allan'
+      click_on 'Log in'
     end
 
     scenario 'viewing the categories index page' do
@@ -36,6 +39,9 @@ feature 'category features', type: :feature do
     before(:each) do
       @user = User.create(username: 'Allan')
       @category = @user.categories.create(name: 'Bathroom', icon: 'bath')
+      visit '/login'
+      fill_in 'session[username]', with: 'Allan'
+      click_on 'Log in'
     end
     scenario 'viewing category show page' do
       visit category_url(@category.id)

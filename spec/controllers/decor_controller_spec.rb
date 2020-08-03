@@ -4,6 +4,9 @@ RSpec.describe DecorsController, type: :controller do
   let(:user) { User.create(username: 'Lucy') }
 
   describe 'decor #create' do
+    before(:example) do
+      session[:user_id] = user.id
+    end
     context 'it redirects to user_decors#index when successful' do
       it 'redirects to the user_decors index page' do
         post :create, params: { user_id: user.id, decor: { name: 'Rugs', price: 10 } }
@@ -40,8 +43,10 @@ RSpec.describe DecorsController, type: :controller do
   end
 
   describe 'decor #index' do
-    it 'renders index template' do
+    before(:example) do
       session[:user_id] = user.id
+    end
+    it 'renders index template' do
       get :index, params: { user_id: user.id }
       expect(response).to render_template(:index)
     end

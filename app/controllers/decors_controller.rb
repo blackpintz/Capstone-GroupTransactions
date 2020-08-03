@@ -1,6 +1,6 @@
 class DecorsController < ApplicationController
+  before_action :require_login
   before_action :set_user, only: %i[show index create destroy unlisted update]
-  before_action :require_login, only: %i[index unlisted]
   before_action :require_user, only: %i[unlisted destroy index]
   before_action :set_decor, only: %i[edit destroy update]
 

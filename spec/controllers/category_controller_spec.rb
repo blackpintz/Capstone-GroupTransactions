@@ -43,6 +43,9 @@ RSpec.describe CategoriesController, type: :controller do
   end
 
   describe 'category #index' do
+    before(:example) do
+      session[:user_id] = user.id
+    end
     it 'renders index template' do
       get :index
       expect(response).to render_template(:index)
@@ -50,6 +53,9 @@ RSpec.describe CategoriesController, type: :controller do
   end
 
   describe 'category #show' do
+    before(:example) do
+      session[:user_id] = user.id
+    end
     it 'renders show template' do
       @category = user.categories.create(name: 'Bathroom', icon: 'bath')
       get :show, params: { id: @category.id }
