@@ -6,8 +6,7 @@
 - A new user will sign up with a username and be directed to their profile page.
 - The user can start adding a list of decor. 
 - On the my decor page, the user will see the list of decors created and total price of the decors at the top of the page.
-- The user can organize their decor list in any categories of choice. If you don't find a category on the list of categories given to select,
-- you can go to the categories page and create one. Then it will reflect on the select options tab.
+- The user can organize their decor list in any categories of choice. If you don't find a category on the list of categories given to select, you can go to the categories page and create one. Then it will reflect on the select options tab.
 - A user can also edit or delete the decors added. 
 - A user can only edit a category that he/she has created.
 
