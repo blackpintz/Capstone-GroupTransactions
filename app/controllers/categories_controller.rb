@@ -1,6 +1,7 @@
 class CategoriesController < ApplicationController
   before_action :require_login
-  before_action :set_category, only: %i[show destroy edit update]
+  before_action :set_category, only: %i[show edit update]
+  before_action :require_user, only: %i[edit update]
   before_action :icons_array, only: %i[new create edit update]
 
   def new
@@ -47,5 +48,9 @@ class CategoriesController < ApplicationController
 
   def category_params
     params.require(:category).permit(:name, :icon)
+  end
+
+  def require_user
+    redirect_to categories_path if current_user != @category.user
   end
 end
