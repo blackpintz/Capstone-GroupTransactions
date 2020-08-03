@@ -6,7 +6,7 @@
               <h5 class="card-title"><%= decor.name%></h5>
               <p class="card-text"><%=number_to_currency(decor.price)%></p>
           </div>
-       <p class="mb-0 mt-4">Created <%= decor.created_at.strftime("%d %B %Y")%>, by <%=decor.user.username %></p>
+       <p class="mb-0 mt-4 text-muted">Created <%= decor.created_at.strftime("%d %B %Y")%>, by <%=decor.user.username %></p>
       </div>
   </div>
 </div>
