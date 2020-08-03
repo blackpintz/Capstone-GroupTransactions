@@ -7,10 +7,16 @@
         <% end %>
       <div class="card-body pt-1">
           <div class="d-flex justify-content-between">
-              <h5 class="card-title"><%= decor.name%></h5>
+              <h5 class="card-title"><%= decor.name%>
+              <small>
+              <%= link_to 'Edit', edit_user_decor_path(@user,decor), class: "card-link text-warning" %>
+              <%= link_to 'Delete', user_decor_path(@user,decor), method: :delete, data: {confirm: "Are you sure you want to delete?"}, 
+                class: "card-link ml-0 text-danger"%></small>
+              </h5>
               <p class="card-text"><%=number_to_currency(decor.price)%></p>
           </div>
        <p class="mb-0 mt-4"><%= decor.created_at.strftime("%d %B %Y")%></p>
+       
       </div>
   </div>
 </div>

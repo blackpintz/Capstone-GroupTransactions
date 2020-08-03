@@ -1,0 +1,26 @@
+<%= render 'decors/error_msgs' %>
+<h2 class="text-center">Edit Decor</h2>
+<div class="row justify-content-center">
+    <div class="col-4">
+        <%= form_with(model: @decor, url: user_decor_path, local: true) do |f| %>
+             <div class="form-row">
+                 <div class="col">
+                     <div class="form-group">
+                           <%= f.label :name %>
+                           <%= f.text_field :name, autofocus: true, autocomplete: 'group name', placeholder: "Decor name" , class: 'form-control' %>
+                     </div>
+                     <div class="form-group">
+                           <%= f.label :price %>
+                           <%= f.text_field :price, autofocus: true, autocomplete: 'group name', placeholder: "Decor price" , class: 'form-control' %>
+                     </div>
+                     <div class="form-group">
+                         <%= f.select :category_id, options_from_collection_for_select(Category.all, :id, :name, @decor.category.nil? ? {} : {selected: @decor.category_id}), {prompt: "Select Category"}, {class: "custom-select mb-1"} %>
+                     </div>
+                     <div class="form-group">
+                          <%= f.submit "Edit Decor", class: 'btn btn-secondary btn-block' %>
+                     </div>
+                 </div>
+             </div>
+        <% end %>
+    </div>
+</div>
