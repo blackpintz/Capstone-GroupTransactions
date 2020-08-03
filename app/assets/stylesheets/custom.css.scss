@@ -5,9 +5,14 @@ body {
   overflow-x: hidden;
 }
 
+.user-page {
+  height: 100vh;
+  background-color: #3778c2;
+}
+
 .show-page {
   width: 100%;
-  height: 100vh;
+  height: 150vh;
   background-color: #3778c2;
 }
 
@@ -36,7 +41,7 @@ body {
 .transaction h5,
 .group-content {
   line-height: 2.7;
-  width: 230px;
+  width: 350px;
 }
 
 .group-content p {
