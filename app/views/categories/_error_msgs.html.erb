@@ -1,4 +1,3 @@
-<% if @category.errors.any?%>
 <ul class="alert alert-warning alert-dismissible fade show rounded-0 mt-1 mx-auto w-50" role="alert">
     <%@category.errors.full_messages.each do |err|%>
         <li>
@@ -9,4 +8,3 @@
         </li>
     <%end%>
 </ul>
-<%end%>
