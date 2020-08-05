@@ -33,7 +33,7 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @decors = @category.decors.includes(:user)
+    @decors = Decor.all
   end
 
   private

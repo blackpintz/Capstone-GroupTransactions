@@ -8,4 +8,9 @@ module ApplicationHelper
       fa_icon 'user', class: 'fa-3x'
     end
   end
+
+  def available_categories(decor)
+    category_ids = decor.categories.pluck(:category_id)
+    Category.all.reject { |value| category_ids.include?(value.id) }
+  end
 end

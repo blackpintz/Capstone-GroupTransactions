@@ -14,9 +14,6 @@
                            <%= f.text_field :price, autofocus: true, autocomplete: 'group name', placeholder: "Decor price" , class: 'form-control' %>
                      </div>
                      <div class="form-group">
-                         <%= f.select :category_id, options_from_collection_for_select(Category.all, :id, :name, @decor.category.nil? ? {} : {selected: @decor.category_id}), {prompt: "Select Category"}, {class: "custom-select mb-1"} %>
-                     </div>
-                     <div class="form-group">
                           <%= f.submit "Edit Decor", class: 'btn btn-secondary btn-block' %>
                      </div>
                  </div>

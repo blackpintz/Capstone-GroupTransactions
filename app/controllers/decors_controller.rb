@@ -5,7 +5,7 @@ class DecorsController < ApplicationController
   before_action :set_decor, only: %i[edit destroy update]
 
   def index
-    @decors = @user.decors.ordered_by_most_recent.includes(:category)
+    @decors = @user.decors.ordered_by_most_recent
     @total = @decors.pluck(:price).sum
   end
 
@@ -45,7 +45,7 @@ class DecorsController < ApplicationController
   private
 
   def decor_params
-    params.require(:decor).permit(:name, :price, :category_id)
+    params.require(:decor).permit(:name, :price, category_ids: [])
   end
 
   def set_user

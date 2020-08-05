@@ -2,7 +2,9 @@
 Rails.application.routes.draw do
     resources :users, except: [:new] do
         get 'unlisted-decor', to: 'decors#unlisted'
-        resources :decors
+        resources :decors do
+            resources :decor_categories, only: [:new, :create]
+        end
     end
     resources :categories
     root 'users#new'
