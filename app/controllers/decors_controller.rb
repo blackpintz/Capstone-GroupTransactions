@@ -5,7 +5,7 @@ class DecorsController < ApplicationController
   before_action :set_decor, only: %i[edit destroy update]
 
   def index
-    @decors = @user.decors.ordered_by_most_recent
+    @decors = @user.decors.ordered_by_most_recent.includes(:categories)
     @total = @decors.pluck(:price).sum
   end
 
@@ -33,7 +33,7 @@ class DecorsController < ApplicationController
   end
 
   def unlisted
-    @decors = @user.decors.with_no_category.ordered_by_most_recent
+    @decors = @user.decors.ordered_by_most_recent.includes([:categories]).select { |decor| decor.categories.empty? }
     @total = @decors.pluck(:price).sum
   end
 
