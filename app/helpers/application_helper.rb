@@ -29,4 +29,26 @@ module ApplicationHelper
   def category_errors_msgs(category)
     render 'categories/error_msgs' if category.errors.any?
   end
+
+  def user_error_msgs(user)
+    render 'users/error_msgs' if user.errors.any?
+  end
+
+  def show_category_decors(_category)
+    if @category.decors.empty?
+      content_tag(:h4, class: 'text-center') do
+        'No decors available for this category.'
+      end
+    else
+      render partial: 'categorydecor', collection: @decors, as: :decor
+    end
+  end
+
+  def edit_button(category)
+    if current_user == category.user
+      content_tag(:span) do
+        link_to('Edit', edit_category_path(category), class: 'btn btn-danger btn-sm ml-1')
+      end
+    end
+  end
 end
