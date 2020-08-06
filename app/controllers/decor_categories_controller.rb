@@ -1,5 +1,8 @@
 class DecorCategoriesController < ApplicationController
-  def new; end
+  def new
+    @decor = Decor.find(params[:decor_id])
+    @user = User.find(params[:user_id])
+  end
 
   def create
     DecorCategory.create(decor_id: params[:decor_id], category_id: params[:decor_category][:category_id])
