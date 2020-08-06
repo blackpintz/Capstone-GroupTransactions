@@ -38,6 +38,7 @@ class DecorsController < ApplicationController
   end
 
   def destroy
+    @decor.categories.delete_all unless @decor.categories.empty?
     @decor.destroy
     redirect_to user_decors_path, notice: 'Decor successfully deleted.'
   end
