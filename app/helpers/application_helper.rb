@@ -51,4 +51,12 @@ module ApplicationHelper
       end
     end
   end
+
+  def flash_msgs(name, msg)
+    if name == 'alert'
+      render partial: 'layouts/alert_msg', locals: { msg: msg }
+    else
+      render partial: 'layouts/success_msg', locals: { msg: msg }
+    end
+  end
 end

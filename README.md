@@ -42,6 +42,7 @@ To get a local copy up and running follow these simple example steps.
 - Clone the project into your local machine.
 - cd into CapstoneProject
 - run ```bundle install```.
+-  Run ```rails db:create```.
 - Run ```rails db:migrate```.
 - Run ```rails c``` to interact with the database.
 - Run ```rails s``` to open the project on the browser.

@@ -33,7 +33,8 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @decors = Decor.all.includes(:user)
+    @decors = @category.decors.includes(:user)
+    @total = @decors.pluck(:price).sum
   end
 
   private
