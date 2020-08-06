@@ -1,6 +1,10 @@
 [![Email me](https://img.shields.io/badge/Hire%2FConsult-Click%20to%20contact-brightgreen)](mailto:rosewanjohi24@gmail.com)
 [![Twitter Follow](https://img.shields.io/twitter/follow/blackpintz?label=Tweet%20me&style=social)](https://twitter.com/blackpintz)
 
+## Project Description
+
+It is an app that groups payments of decor bought for designing specific sections of a home. The decors are divided into categories of specific rooms of a home. Example living room, bathroom etc.
+
 ## Mobile app for grouping decor payments according to your categories of choice
 
 - A new user will sign up with a username and be directed to their profile page.
@@ -10,9 +14,14 @@
 - A user can also edit or delete the decors added. 
 - A user can only edit a category that he/she has created.
 
--[Live demo link](https://secret-garden-94979.herokuapp.com/)
+![screenshot](images/category_page_index.png)
 
--[video presentation](https://www.loom.com/share/9cf85feeb8214e1789bdd9df292f5962)
+![screenshot](images/show_page_decor.png)
+
+![screenshot](images/show_page_user.png)
+
+- [Live demo link](https://secret-garden-94979.herokuapp.com/)
+- [video presentation](https://www.loom.com/share/9cf85feeb8214e1789bdd9df292f5962)
 
 ## Built With
 
