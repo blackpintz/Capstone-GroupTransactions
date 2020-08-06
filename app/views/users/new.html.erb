@@ -1,7 +1,5 @@
-<div class="d-flex justify-content-between signup-nav text-light align-items-end">
-    <%= fa_icon "arrow-left", class: "fa-3x font-weight-light" %>
+<div class="d-flex justify-content-center signup-nav text-light align-items-end">
     <h4 class="font-weight-light">REGISTER</h4>
-    <p class="mr-2 mb-1">Next</p>
 </div>
 <%= user_error_msgs(@user) %>
 <h2 class="text-center">Sign up</h2>
@@ -24,7 +22,7 @@
                  </div>
              </div>
         <% end %>
-        <%= link_to "Login", login_path, class: "btn btn-primary btn-sm" %>
+        <p>Or <%= link_to "Login", login_path, class: "stretched-link" %></p>
     </div>
 </div>
 

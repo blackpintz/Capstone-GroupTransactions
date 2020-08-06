@@ -12,7 +12,6 @@
               <p class="card-text"><%=number_to_currency(decor.price)%></p>
           </div>
           <%= link_to "Add another category", new_user_decor_decor_category_path(@user, decor), class: "btn btn-info btn-sm" %>
-          <!--<button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Add another category</button>-->
        <p class="mb-0 mt-4"><%= decor.created_at.strftime("%d %B %Y")%></p>
       </div>
   </div>

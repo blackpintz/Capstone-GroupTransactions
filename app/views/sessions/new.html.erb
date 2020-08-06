@@ -1,7 +1,5 @@
-<div class="d-flex justify-content-between signup-nav text-light align-items-end">
-    <%= fa_icon "arrow-left", class: "fa-3x font-weight-light" %>
+<div class="d-flex justify-content-center signup-nav text-light align-items-end">
     <h4 class="font-weight-light">LOGIN</h4>
-    <p class="mr-2 mb-1">Log in</p>
 </div>
 <%= render 'layouts/flash' %>
 <h2 class="text-center">Login</h2>
@@ -20,6 +18,6 @@
                  </div>
              </div>
         <% end %>
-        <%= link_to "Sign up", root_path, class: "btn btn-primary btn-sm" %>
+       <p>Or <%= link_to "Sign up", root_path, class: "stretched-link" %></p> 
     </div>
 </div>

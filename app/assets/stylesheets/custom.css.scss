@@ -48,3 +48,11 @@ body {
   height: 30px;
   line-height: 2;
 }
+
+@media only screen and (max-width: 991px) {
+  .app-nav ul,
+  .app-nav a {
+    width: 200px;
+    background-color: #000;
+  }
+}
