@@ -1,7 +1,7 @@
  <div class="user-page d-flex flex-column align-items-center pt-2">
          <%= render 'layouts/flash' %>
          <%= image_avatar(@user) %>
-         <h4><%= @user.username %></h4>
+         <h4><%= sanitize @user.username.html_safe %></h4>
          <div class="d-flex show-list align-items-center">
              <%= fa_icon "image", class: "fa-3x" %>
              <h5 class="ml-2 border-bottom font-weight-light"><%= link_to "My Decors.", user_decors_path(@user), class: "text-light" %></h5>

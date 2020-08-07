@@ -9,4 +9,8 @@ class User < ApplicationRecord
   def decors_with_no_category(decors)
     decors.select { |decor| decor.categories.empty? }
   end
+
+  def sanitize
+    @user = User.new
+  end
 end
