@@ -13,6 +13,6 @@ RSpec.describe Decor, type: :model do
 
   describe 'associations' do
     it { should belong_to(:user) }
-    it { should belong_to(:category).optional }
+    it { should have_many(:categories).through(:decor_categories) }
   end
 end

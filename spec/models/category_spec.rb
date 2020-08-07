@@ -9,6 +9,6 @@ RSpec.describe Category, type: :model do
 
   describe 'associations' do
     it { should belong_to(:user) }
-    it { should have_many(:decors) }
+    it { should have_many(:decors).through(:decor_categories) }
   end
 end
