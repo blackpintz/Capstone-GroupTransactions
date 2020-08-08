@@ -1,0 +1,12 @@
+<div class="card p-3 mb-3">
+    <div class="d-flex">
+         <%= fa_icon @category.icon, class: "fa-3x" %>
+      <div class="card-body pt-1">
+          <div class="d-flex justify-content-between">
+              <h5 class="card-title"><%= decor.name%></h5>
+              <p class="card-text"><%=number_to_currency(decor.price)%></p>
+          </div>
+       <p class="mb-0 mt-4 text-muted">Created <%= decor.created_at.strftime("%d %B %Y")%>, by <%=decor.user.username %></p>
+      </div>
+  </div>
+</div>

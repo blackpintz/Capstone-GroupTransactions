@@ -1,0 +1,2 @@
+module DecorsHelper
+end

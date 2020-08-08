@@ -1,0 +1,12 @@
+<div class="card mb-3">
+    <div class="card-body d-flex justify-content-between">
+        <p class="card-text">Total amount</p>
+        <p class="card-text font-weight-bold"><%= number_to_currency(@total)%></p>
+    </div>
+</div>
+<%= render @decors %>
+<div class="card text-white bg-success mb-3 rounded-0">
+  <div class="card-body">
+      <%= link_to "Add New Decor", new_user_decor_path, class: "btn btn-outline-light btn-lg btn-block" %>
+  </div>
+</div>

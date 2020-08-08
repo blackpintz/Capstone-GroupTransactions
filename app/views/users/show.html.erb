@@ -1,0 +1,17 @@
+ <div class="user-page d-flex flex-column align-items-center pt-2">
+         <%= render 'layouts/flash' %>
+         <%= image_avatar(@user) %>
+         <h4><%= sanitize @user.username.html_safe %></h4>
+         <div class="d-flex show-list align-items-center">
+             <%= fa_icon "image", class: "fa-3x" %>
+             <h5 class="ml-2 border-bottom font-weight-light"><%= link_to "My Decors.", user_decors_path(@user), class: "text-light" %></h5>
+         </div>
+         <div class="d-flex show-list align-items-center">
+             <%= fa_icon "image", class: "fa-3x" %>
+             <h5 class="ml-2 border-bottom font-weight-light"> <%= link_to "My uncategorized decors.", user_unlisted_decor_path(@user), class: "text-light" %></h5>
+         </div>
+         <div class="d-flex show-list align-items-center">
+             <%= fa_icon "users", class: "fa-3x" %>
+             <h5 class="ml-2 border-bottom font-weight-light"><%= link_to "Categories.", categories_path, class: "text-light" %></h5>
+         </div>
+ </div>

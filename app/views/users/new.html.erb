@@ -1,0 +1,28 @@
+<div class="d-flex justify-content-center signup-nav text-light align-items-end">
+    <h4 class="font-weight-light">REGISTER</h4>
+</div>
+<%= user_error_msgs(@user) %>
+<h2 class="text-center">Sign up</h2>
+<div class="row justify-content-center">
+    <div class="col-4">
+        <%= form_with scope: :user, url: users_path, local: true do |f| %>
+             <div class="form-row">
+                 <div class="col">
+                     <div class="form-group">
+                           <%= f.label :username %>
+                           <%= f.text_field :username, autofocus: true, autocomplete: 'user name', placeholder: "User name" , class: 'form-control' %>
+                     </div>
+                      <div class="form-group">
+                           <%= f.label :Photo %>
+                           <%= f.file_field :avatar, class: 'form-control' %>
+                     </div>
+                     <div class="form-group">
+                          <%= f.submit "Sign up", class: 'btn btn-secondary btn-block' %>
+                     </div>
+                 </div>
+             </div>
+        <% end %>
+        <p>Or <%= link_to "Login", login_path %></p>
+    </div>
+</div>
+
