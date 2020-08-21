@@ -20,7 +20,7 @@ It is an app that groups payments of decor bought for designing specific section
 
 ![screenshot](images/show_page_user.png)
 
-- [Live demo link](https://secret-garden-94979.herokuapp.com/)
+- [Live demo link](https://budgetapp-for-decor.herokuapp.com/)
 - [video presentation](https://www.loom.com/share/9cf85feeb8214e1789bdd9df292f5962)
 
 ## Built With
